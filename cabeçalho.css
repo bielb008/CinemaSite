@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background-color: #000000;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+}
+nav li{
+    margin-left: 7px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav li a:hover{
+    background-color: white;
+    color: black;
+
+}
+body {
+
+    background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 34%, rgb(0, 0, 0) 100%);
+}  
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding:0 2vw;
+  }
+
+  .gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-items:hover {
+    transform: scale(1.3);
+  }
+
+  footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-style: italic;
+  }
+
+  /* Estilo para o nome da imagem e texto, inicia oculto */
+.image-name,
+.image-text {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo com transparência */
+  padding: 10px;
+  text-align: center;
+  z-index: 2; /* Defina um z-index maior para que o balão de diálogo fique na frente das imagens */
+  width: 100%; /* Para cobrir toda a largura da imagem */
+  bottom: 0; /* Posicione a caixa de texto na parte inferior */
+}
+
+/* Estilo para o contêiner da imagem */
+.gallery-items {
+    position: relative;
+    width: 240px;
+    height: 420px;
+    border: 0px solid #ffffff;
+    box-shadow: 5px 5px 5px rgb(255, 255, 255);
+    flex-grow: 1;
+    transition: transform .5s linear;
+    z-index: 1; /* Defina um z-index menor para as imagens */
+  }
+
+  /* Quando o mouse estiver sobre a imagem, mostre o nome e o texto e ajuste o z-index */
+.gallery-items:hover {
+    z-index: 3; /* Defina um z-index ainda maior para a imagem sobreposta */
+  }
+
+  .gallery-items:hover .image-name,
+.gallery-items:hover .image-text {
+  display: block;
+  z-index: 4; /* Defina um z-index ainda maior para que o balão de diálogo fique na frente de todas as imagens */
+}
+
